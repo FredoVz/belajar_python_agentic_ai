@@ -66,10 +66,37 @@ def video_generation():
     generated_video.video.save("multimodal/generated-video.mp4")
     print("Video berhasil di simpan ke multimodal/generated-video.mp4")
 
+def video_understanding():
+    prompt = input("Prompt video understanding: \n")
+    file_video_path = "multimodal/sample-video.mp4"
+
+    file_video = client.files.upload(file=file_video_path)
+
+    while file_video.state.name == "PROCESSING":
+        print("Video sedang diproses")
+        time.sleep(5)
+        file_video = client.files.get(name=file_video.name)
+
+    if file_video.state.name == "FAILED":
+        raise ValueError("Gagal upload video")
+    
+    print("Video berhasil di upload.")
+
+    response = client.models.generate_content(
+        model=os.getenv("GEMINI_MODEL"), 
+        contents=[
+            file_video, 
+            prompt
+        ],
+    )
+
+    print(response.text)
+
 def main():
     # image_generation()
     # image_understanding()
-    video_generation()
+    # video_generation()
+    video_understanding()
 
 main()
 
