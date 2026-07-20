@@ -92,11 +92,65 @@ def video_understanding():
 
     print(response.text)
 
+def document_understanding():
+    prompt = input("Prompt document understanding: \n")
+    file_document_path = "multimodal/cv.pdf"
+
+    file_document = client.files.upload(file=file_document_path)
+
+    while file_document.state.name == "PROCESSING":
+        print("Document sedang diproses")
+        time.sleep(5)
+        file_document = client.files.get(name=file_document.name)
+
+    if file_document.state.name == "FAILED":
+        raise ValueError("Gagal upload document")
+    
+    print("Document berhasil di upload.")
+
+    response = client.models.generate_content(
+        model=os.getenv("GEMINI_MODEL"), 
+        contents=[
+            file_document, 
+            prompt
+        ],
+    )
+
+    print(response.text)
+
+def audio_understanding():
+    prompt = input("Prompt audio understanding: \n")
+    file_audio_path = "multimodal/sample-audio.mp3"
+
+    file_audio = client.files.upload(file=file_audio_path)
+
+    while file_audio.state.name == "PROCESSING":
+        print("Audio sedang diproses")
+        time.sleep(5)
+        file_audio = client.files.get(name=file_audio.name)
+
+    if file_audio.state.name == "FAILED":
+        raise ValueError("Gagal upload audio")
+    
+    print("Audio berhasil di upload.")
+
+    response = client.models.generate_content(
+        model=os.getenv("GEMINI_MODEL"), 
+        contents=[
+            file_audio, 
+            prompt
+        ],
+    )
+
+    print(response.text)
+
 def main():
     # image_generation()
     # image_understanding()
     # video_generation()
-    video_understanding()
+    # video_understanding()
+    # document_understanding()
+    audio_understanding()
 
 main()
 
