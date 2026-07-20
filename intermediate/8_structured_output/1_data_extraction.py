@@ -37,7 +37,7 @@ def extract_article_meta(text: str) -> ArticleMetaSchema:
 
     return ArticleMetaSchema.model_validate(response.text)
 
-def main()
+def main():
     sample_article = """
     Belajar Python Agentic AI: Panduan Pemula
     Oleh: Wilfredo Alexander Sutanto | 21 Juli 2026
