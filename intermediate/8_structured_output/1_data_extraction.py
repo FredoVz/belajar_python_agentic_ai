@@ -1,4 +1,5 @@
 import os
+import json
 from google import genai
 from google.genai import types
 from dotenv import load_dotenv
@@ -35,7 +36,7 @@ def extract_article_meta(text: str) -> ArticleMetaSchema:
         contents=prompt,
     )
 
-    return ArticleMetaSchema.model_validate(response.text)
+    return ArticleMetaSchema.model_validate(json.loads(response.text))
 
 def main():
     sample_article = """
@@ -55,3 +56,8 @@ def main():
     print(f"Ringkasan       : {meta.ringkasan}")
 
 main()
+
+# Cara debugging
+# cd intermediate
+# cd 8_structured_output
+# uv run 1_data_extraction.py
