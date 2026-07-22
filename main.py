@@ -7,6 +7,7 @@ print(year)
 print(in_progress)
 print(f"Selamat datang di kelas {title}")
 
+# === Menjawab Quiz Level Basic ===
 # 1. Perintah apa yang dipakai untuk memastikan Python sudah terinstall?
 # Jawaban : python --version atau python3 --version
 # 2. Khusus pengguna windows, kenapa opsi "Add Python to PATH" penting untuk dicentang?
