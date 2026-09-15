@@ -1,0 +1,31 @@
+Terminal
+
+Cara install Git :
+Link web = git-scm.com
+
+Daftar akun git :
+git config --global user.name "FredoVz"
+git config --global user.email "dm.fredo018@gmail.com"
+
+Daftar ssh di Git bash :
+ssh-keygen -t rsa
+	nama file = contoh-ssh-git-python
+ls -all
+cat contoh-ssh-git-python.pub
+
+Upload project ke GitHub :
+git remote add origin nama_repository_ssh
+
+git status => berisi informasi file
+git remote -v
+git add .
+git commit -m "ini project python pertama saya"
+
+Awal :
+git push -u origin main
+Selanjutnya :
+git push
+
+
+
+

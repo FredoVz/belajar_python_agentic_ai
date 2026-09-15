@@ -1,0 +1,34 @@
+Penjelasan GitHub
+
+Kenalan dengan Git dan GitHub?
+Analogi:
+Ada minuman air mineral dalam kemasan botol => "Aqua"
+Git => Air minuman / air mineral => Tools utama
+GitHub => Aqua => Merk layanan Git berbasis cloud (GitHub.com)
+
+Project TA Mahasiswa beberapa versi
+- tugas-akhir.docx
+- ta-revisi-1.docx
+- ta-revisi-final.docx
+
+Git mengelola versi dari kode program kita. Setiap ada ubahan akan disimpan dalam git
+
+Sejarah Git
+Dibuat oleh Linus Torvalds
+Ide awalnya = "Pusing karena project open source nya banyak konflik"
+
+git -> aplikasi untuk mengelola versi kode bisa melacak siapa yang membuat atau mengubah kode. Jadi kalau ada error bisa langsung di perbaiki.
+
+Merk lain selain GitHub.com
+- Gitlab.com
+- Bitbucket.org
+
+Tahapan Kerja Git
+1. Working Directory = Edit / modified code atau file in project
+2. Staging Area = Fase dimana kita akan melakukan commit. Ada 2 fase :
+- Git add . => staging area
+- Git commit => Menyimpan ubahan file => save
+3. Local Repository => Laptop kamu, Komputer kamu => Setelah commit
+Analogi = flashdisk
+4. Remote Repository (GitHub.com)
+Analogi = google drive / cloud storage
