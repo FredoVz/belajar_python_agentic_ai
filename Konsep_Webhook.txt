@@ -1,0 +1,25 @@
+Komunikasi Webhook
+
+1. Telegram Bot (Python)
+<- (4)
+url webhook -> 200 OK -> Server Telegram (3)
+<- POST (2)
+
+-> Reply data (text, audio, image, doc) -> Server Telegram (5)
+
+2. Server Telegram
+
+<- User kirim pesan (1)
+-> parsed reply data -> Aplikasi Telegram (6)
+
+3. Aplikasi Telegram (web atau mobile)
+
+URL Webhook :
+
+Untuk mengelola URL Webhook
+FastAPI
+Python Framework for backend development with REST API
+
+- Rest API, arsitektur data exchange (pertukaran data) melalui jalur HTTP
+- URL mewakili model data atau proses tertentu
+Contoh: /products, /users, /contents, /login, /sign-up, /checkout, dsb
