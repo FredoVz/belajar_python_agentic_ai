@@ -1,0 +1,30 @@
+Alur Aplikasi Mentor Baha inggris Virtual
+1. Telegram Bot (Python)
+
+Harus daftar -> Autentikasi -> @BotFather -> token -> Server Telegram
+
+2. Server Telegram
+
+Auto "kenal"
+
+3. Aplikasi Telegram (web atau mobile)
+
+Teknik Komunikasi
+1. Pooling (interval / jeda waktu rutin)
+a. Telegram Bot (Python)
+3s -> Ada pesan baru
+b. Server Telegram
+
+- Cocok untuk belajar
+- Pengembangan di local (komputer sendiri)
+
+2. Webhook
+a. Telegram Bot (Python)
+url => webhook RestAPI
+efisien
+b. Server Telegram
+<- User kirim pesan
+c. Aplikasi Telegram (Web atau mobile)
+
+- Cocok untuk production (bisa diakses banyak orang)
+- VPS bisa menjalankan service Telegram Bot dengan 
