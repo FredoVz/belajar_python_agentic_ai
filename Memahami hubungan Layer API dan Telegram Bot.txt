@@ -1,0 +1,14 @@
+Memahami hubungan Layer API dan Telegram Bot
+
+Telegram Bot
+2 Layer
+1. Telegram service (by python-telegram-bot)
+=> Nyalain service telegram itu termasuk "expensive resources", perlu Waktu dan komputasi (ram, cpu).
+2. API (by FastAPI)
+=> Trigger untuk running server
+=> lifespan => Framework FastAPI mengizinkan developer untuk pasang logic saat server "nyala" dan "mati"
+=> Wajib HTTPS => POST/webhook
+Server Telegram
+Header => "X-Telegram-Bot-Api-Secret-Token"
+Kita bisa kasih value, terserah kita, supaya punya kepastian kalau request server telegram itu benar dari settingan yang kita buat
+Body
