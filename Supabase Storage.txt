@@ -1,0 +1,17 @@
+Supabase Storage
+
+Tanpa Supabase Storage
+- Telegram Bot (Python) <-> Aplikasi Telegram (web atau mobile)
+<-> OS File System
+
+Kelebihan dan kekurangan
++ Sederhana, to the point
+- Kalau server utama mati, system penyimpanan dan service telegram bot mati juga
+
+Dengan Supabase Storage
+- Telegram Bot (Python) <-> Aplikasi Telegram (web atau mobile)
+<-> Supabase Storage
+
+Kelebihan dan kekurangan
++ Server utama hanya menjalankan service telegram bot
+- Kode lebih kompleks, perlu mengenal dulu cara kerja supabase storage
