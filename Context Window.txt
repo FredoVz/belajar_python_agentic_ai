@@ -1,0 +1,46 @@
+Context Window
+Seberapa jauh memory yang akan diproses oleh LLM
+
+Telegram Bot (Python)
+<-
+Misalnya, ada 1000 baris
+message_text, 01-10-2026, 10:00
+...
+message_text, 15-10-2026, 08.00
+message_text, 15-10-2026, 08.00
+Query
+load_history_by_user_id
+<- Database (chat_histories)
+
+Telegram Bot (Python)
+(Semua hasil query)
+->
+LLM Gemini
+- Pemrosesan lebih lama
+- Penggunaan token membesar
+
+MAX_HISTORY_ITEMS
+
+Telegram Bot (Python)
+<- (MAX_HISTORY_ITEMS
+Misalnya, ada 1000 baris
+message_text, 01-10-2026, 10:00
+...
+message_text, 15-10-2026, 08.00
+message_text, 15-10-2026, 08.10
+Query
+load_history_by_user_id
+<- Database (chat_histories)
+
+Telegram Bot (Python)
+(Semua hasil query)
+Hasil pembatasan
+->
+LLM Gemini
+- Pemrosesan lebih singkat
+- Penggunaan token lebih sedikit
+
+Menggunakan function "chat"
+untuk pengelolaan riwayat percakapan yang lebih baik
+
+
